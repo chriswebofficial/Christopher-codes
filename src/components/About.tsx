@@ -55,7 +55,7 @@ const About = () => {
             <p className="text-gray-400 text-lg leading-8">
               I'm also interested in design and digital creativity.
               That influences how I approach development because I
-              don't just want a website to work — I want it to feel
+              don't just want a website to work I want it to feel
               intentional, easy to use, and suited to the people
               using it.
             </p>
