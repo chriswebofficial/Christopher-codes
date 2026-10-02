@@ -2,118 +2,135 @@ const About = () => {
   return (
     <section
       id="about"
-      className="py-32 px-6 bg-zinc-950 text-white overflow-hidden"
+      className="py-32 px-6 bg-zinc-950 text-white"
     >
       <div className="max-w-7xl mx-auto">
 
-        {/* SECTION TITLE */}
+        {/* SECTION HEADER */}
         <div
           data-aos="fade-up"
-          className="text-center mb-24"
+          className="max-w-3xl mb-20"
         >
-          <p className="text-blue-500 font-semibold tracking-[0.3em] uppercase mb-4">
+          <p className="text-gray-500 text-sm tracking-[0.25em] uppercase mb-5">
             About Me
           </p>
 
           <h2 className="text-4xl md:text-6xl font-bold leading-tight">
-            Passionate Frontend <br />
-            Web Developer
+            I build websites from
+            <span className="text-gray-500"> idea to deployment.</span>
           </h2>
         </div>
 
-        {/* CONTENT */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+        {/* MAIN CONTENT */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
 
-          {/* LEFT SIDE */}
-          <div data-aos="fade-right">
-            <h3 className="text-3xl md:text-4xl font-bold mb-8 leading-tight">
-              Building Modern & Interactive
-              Digital Experiences
-            </h3>
-
-            <p className="text-gray-400 leading-8 mb-6 text-lg">
-              Hello! I'm{" "}
+          {/* STORY */}
+          <div
+            data-aos="fade-right"
+            className="lg:col-span-2"
+          >
+            <p className="text-gray-300 text-xl leading-9 mb-8">
+              I'm{" "}
               <span className="text-white font-semibold">
-                Balogun Christopher
+                Balogun Christopher Simileoluwa
               </span>
-              , a passionate frontend developer focused on crafting
-              modern, responsive, and visually engaging websites and
-              web applications.
+              , a full-stack web developer who enjoys turning ideas
+              into useful digital products.
             </p>
 
-            <p className="text-gray-400 leading-8 mb-6 text-lg">
-              I specialize in building clean and scalable user
-              interfaces using React, TypeScript, Tailwind CSS,
-              JavaScript, and Next.js. My goal is to combine
-              performance, functionality, and design to create smooth
-              user experiences across all devices.
+            <p className="text-gray-400 text-lg leading-8 mb-6">
+              My work covers both sides of web development. I build
+              the interfaces people interact with and also work with
+              backend services, databases, authentication, and APIs
+              that make applications function behind the scenes.
             </p>
 
-            <p className="text-gray-400 leading-8 mb-6 text-lg">
-              Beyond development, I also enjoy digital design and
-              creative problem solving, blending creativity with code
-              to build modern and impactful products.
+            <p className="text-gray-400 text-lg leading-8 mb-6">
+              I mainly work with technologies such as React,
+              TypeScript, JavaScript, Tailwind CSS, Next.js, MongoDB,
+              Firebase, and other tools within the modern JavaScript
+              ecosystem.
             </p>
 
-            <p className="text-gray-400 leading-8 text-lg">
-              I’m continuously learning, improving my skills, and
-              working toward becoming a professional frontend engineer
-              capable of building high-quality web experiences.
+            <p className="text-gray-400 text-lg leading-8">
+              I'm also interested in design and digital creativity.
+              That influences how I approach development because I
+              don't just want a website to work — I want it to feel
+              intentional, easy to use, and suited to the people
+              using it.
             </p>
           </div>
 
-          {/* RIGHT SIDE */}
+          {/* QUICK INFORMATION */}
           <div
             data-aos="fade-left"
-            className="grid grid-cols-1 sm:grid-cols-2 gap-6"
+            className="border-l border-white/10 pl-8"
           >
+            <div className="mb-10">
+              <p className="text-xs text-gray-500 uppercase tracking-[0.2em] mb-3">
+                What I Do
+              </p>
 
-            {/* CARD */}
-            <div className="group bg-zinc-900/70 backdrop-blur-sm p-8 rounded-3xl border border-white/10 hover:border-blue-500/40 hover:-translate-y-2 transition duration-500 shadow-lg">
-              <h4 className="text-5xl font-bold text-blue-500 mb-4 group-hover:scale-110 transition duration-300">
-                2+
-              </h4>
+              <h3 className="text-2xl font-semibold">
+                Full-Stack Development
+              </h3>
+            </div>
+
+            <div className="mb-10">
+              <p className="text-xs text-gray-500 uppercase tracking-[0.2em] mb-3">
+                Frontend
+              </p>
 
               <p className="text-gray-400 leading-7">
-                Years Learning Frontend Development
+                React, TypeScript, JavaScript, Tailwind CSS,
+                responsive interfaces and interactive experiences.
               </p>
             </div>
 
-            {/* CARD */}
-            <div className="group bg-zinc-900/70 backdrop-blur-sm p-8 rounded-3xl border border-white/10 hover:border-purple-500/40 hover:-translate-y-2 transition duration-500 shadow-lg">
-              <h4 className="text-5xl font-bold text-purple-500 mb-4 group-hover:scale-110 transition duration-300">
-                10+
-              </h4>
+            <div className="mb-10">
+              <p className="text-xs text-gray-500 uppercase tracking-[0.2em] mb-3">
+                Backend
+              </p>
 
               <p className="text-gray-400 leading-7">
-                Personal & Practice Projects Built
+                APIs, authentication, databases and application
+                logic using technologies such as Firebase,
+                MongoDB and Next.js.
               </p>
             </div>
 
-            {/* CARD */}
-            <div className="group bg-zinc-900/70 backdrop-blur-sm p-8 rounded-3xl border border-white/10 hover:border-cyan-500/40 hover:-translate-y-2 transition duration-500 shadow-lg">
-              <h4 className="text-5xl font-bold text-cyan-500 mb-4 group-hover:scale-110 transition duration-300">
-                React
-              </h4>
+            <div>
+              <p className="text-xs text-gray-500 uppercase tracking-[0.2em] mb-3">
+                Currently
+              </p>
 
               <p className="text-gray-400 leading-7">
-                Main Frontend Framework
+                Studying Software and Web Development while
+                continuing to build real projects and improve
+                my development skills.
               </p>
             </div>
-
-            {/* CARD */}
-            <div className="group bg-zinc-900/70 backdrop-blur-sm p-8 rounded-3xl border border-white/10 hover:border-pink-500/40 hover:-translate-y-2 transition duration-500 shadow-lg">
-              <h4 className="text-5xl font-bold text-pink-500 mb-4 group-hover:scale-110 transition duration-300">
-                UI
-              </h4>
-
-              <p className="text-gray-400 leading-7">
-                Responsive & Modern Interface Design
-              </p>
-            </div>
-
           </div>
         </div>
+
+        {/* BOTTOM STRIP */}
+        <div
+          data-aos="fade-up"
+          className="mt-24 pt-8 border-t border-white/10 flex flex-col md:flex-row md:items-center md:justify-between gap-6"
+        >
+          <p className="text-gray-500">
+            Based in Nigeria · Available for web projects
+          </p>
+
+          <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-gray-500">
+            <span>React</span>
+            <span>TypeScript</span>
+            <span>Next.js</span>
+            <span>MongoDB</span>
+            <span>Firebase</span>
+          </div>
+        </div>
+
       </div>
     </section>
   );

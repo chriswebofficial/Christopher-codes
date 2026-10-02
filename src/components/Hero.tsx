@@ -2,98 +2,112 @@ import { TypeAnimation } from "react-type-animation";
 
 const Hero = () => {
   return (
-    <section className="min-h-screen bg-black text-white flex items-center pt-24 px-6 overflow-hidden relative ">
-
-      {/* BACKGROUND GLOW */}
-      <div className="absolute top-0 left-0 w-72 h-72 bg-blue-500/20 blur-3xl rounded-full"></div>
-      <div className="absolute bottom-0 right-0 w-72 h-72 bg-purple-500/20 blur-3xl rounded-full"></div>
-
-      <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-20 items-center relative z-10">
+    <section className="min-h-screen bg-black text-white flex items-center pt-24 px-6 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
         {/* LEFT CONTENT */}
         <div
           data-aos="fade-right"
           className="text-center lg:text-left"
         >
-          <p className="text-gray-400 text-sm md:text-base mb-5 tracking-[0.3em] uppercase">
-            Frontend Developer
+          <p className="text-gray-500 text-sm md:text-base mb-5 tracking-[0.25em] uppercase">
+            Full-Stack Web Developer
           </p>
 
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold leading-tight mb-6">
-            Balogun <br />
-
-            <span className="bg-linear-to-r from-white to-gray-500 bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[0.95] tracking-tight mb-8">
+            Balogun
+            <br />
+            <span className="text-gray-400">
               Christopher
             </span>
           </h1>
 
-          {/* TYPING ANIMATION */}
-          <div className="h-20 mb-8">
-            <h2 className="text-2xl md:text-4xl font-bold bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+          {/* TYPING TEXT */}
+          <div className="min-h-14 mb-7">
+            <h2 className="text-2xl md:text-4xl font-semibold text-white">
               <TypeAnimation
                 sequence={[
-                  "Frontend Web Developer",
-                  2000,
-                  "React & TypeScript Engineer",
-                  2000,
-                  "Modern UI/UX Designer",
-                  2000,
+                  "Full-Stack Web Developer",
+                  2500,
+                  "React & TypeScript Developer",
+                  2500,
+                  "Web Application Developer",
+                  2500,
                   "Creative Web Developer",
-                  2000,
+                  2500,
                 ]}
                 wrapper="span"
-                speed={50}
+                speed={45}
                 repeat={Infinity}
               />
             </h2>
           </div>
 
           <p className="text-gray-400 text-lg leading-8 max-w-2xl mx-auto lg:mx-0">
-            I design and build modern, responsive, and
-            high-performance web applications focused on
-            clean user experiences, smooth animations,
-            and scalable frontend architecture using
-            React, TypeScript, Tailwind CSS, and modern
-            web technologies.
+            I build websites and web applications from the interface
+            users see to the systems that power them. I work with
+            modern frontend technologies, backend services, databases,
+            and deployment tools to turn ideas into working products.
           </p>
 
           {/* BUTTONS */}
-          <div className="flex flex-col sm:flex-row gap-5 mt-12 justify-center lg:justify-start">
+          <div className="flex flex-col sm:flex-row gap-4 mt-10 justify-center lg:justify-start">
 
+            {/* VIEW PROJECTS */}
             <a
-            href="#projects"
-             className="bg-white text-black px-8 py-4 rounded-full font-semibold hover:scale-105 hover:bg-gray-200 transition duration-300 shadow-2xl">
-              View Projects
+              href="#projects"
+              className="bg-white text-black px-8 py-4 font-semibold hover:bg-gray-200 transition duration-300"
+            >
+              View My Work
             </a>
 
-            {/* <a
-            href="#Contact"
-             className="border border-white/20 bg-white/5 backdrop-blur-sm px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-black transition duration-300">
-              Contact Me
-            </a> */}
+            {/* DOWNLOAD CV */}
+            <a
+              href="/CV.pdf"
+              download
+              className="border border-white/20 px-8 py-4 font-semibold text-white hover:bg-white hover:text-black transition duration-300"
+            >
+              Download CV
+            </a>
 
+          </div>
+
+          {/* TECHNOLOGY LINE */}
+          <div className="mt-12 flex flex-wrap gap-x-6 gap-y-3 justify-center lg:justify-start text-sm text-gray-500">
+            <span>React</span>
+            <span>TypeScript</span>
+            <span>Next.js</span>
+            <span>Node.js</span>
+            <span>MongoDB</span>
           </div>
         </div>
 
         {/* RIGHT IMAGE */}
         <div
           data-aos="fade-left"
-          className="flex justify-center"
+          className="flex justify-center lg:justify-end"
         >
-          <div className="relative group">
+          <div className="relative">
 
-            {/* ANIMATED GLOW */}
-            <div className="absolute inset-0 bg-linear-to-r  blur-3xl opacity-30 rounded-[40px] animate-pulse"></div>
+            {/* SIMPLE IMAGE FRAME */}
+            <div className="absolute -inset-3 border border-white/10"></div>
 
-            {/* FLOATING BORDER */}
-            <div className="absolute -inset-1 rounded-[40px] bg-linear-to-r opacity-40 blur-md"></div>
-
-            {/* IMAGE */}
             <img
               src="/profile.jpeg"
-              alt="ChrisToonz"
-              className="relative w-72 md:w-108 m-7 rounded-[40px] object-cover border border-white/10 shadow-2xl group-hover:scale-105 transition duration-500"
+              alt="Balogun Christopher"
+              className="relative w-72 md:w-96 lg:w-[430px] h-[420px] md:h-[520px] object-cover grayscale hover:grayscale-0 transition duration-700"
             />
+
+            {/* SMALL LABEL */}
+            <div className="absolute bottom-5 left-5 bg-black border border-white/10 px-5 py-3">
+              <p className="text-xs text-gray-500 uppercase tracking-widest">
+                Based in Nigeria
+              </p>
+
+              <p className="text-sm font-medium text-white mt-1">
+                Available for Projects
+              </p>
+            </div>
 
           </div>
         </div>

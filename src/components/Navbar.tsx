@@ -36,14 +36,15 @@ const Navbar = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-
     handleScroll();
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-black/70 backdrop-blur-xl border-b border-white/10">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-black/90 border-b border-white/10">
 
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-20">
@@ -51,24 +52,22 @@ const Navbar = () => {
           {/* LOGO */}
           <a
             href="#"
-            className="text-2xl font-bold text-white tracking-wide hover:opacity-80 transition"
+            className="text-xl md:text-2xl font-bold text-white tracking-tight hover:text-gray-400 transition"
           >
-            Christopher
+            Christopher.
           </a>
 
           {/* DESKTOP MENU */}
-          <ul className="hidden md:flex items-center gap-10 text-white">
+          <ul className="hidden md:flex items-center gap-8">
 
             {navLinks.map((link) => (
               <li key={link.name}>
                 <a
                   href={`#${link.path}`}
-                  className={`relative text-sm uppercase tracking-wider transition duration-300 after:absolute after:left-0 after:-bottom-2 after:h-0.5 after:transition-all after:duration-300
-                  
-                  ${
+                  className={`text-sm transition duration-300 ${
                     activeSection === link.path
-                      ? "text-blue-400 after:w-full after:bg-blue-500"
-                      : "text-white hover:text-blue-400 after:w-0 after:bg-blue-500 hover:after:w-full"
+                      ? "text-white"
+                      : "text-gray-500 hover:text-white"
                   }`}
                 >
                   {link.name}
@@ -80,10 +79,11 @@ const Navbar = () => {
 
           {/* MOBILE BUTTON */}
           <button
+            aria-label={isOpen ? "Close menu" : "Open menu"}
             className="md:hidden text-white"
             onClick={() => setIsOpen(!isOpen)}
           >
-            {isOpen ? <X size={30} /> : <Menu size={30} />}
+            {isOpen ? <X size={26} /> : <Menu size={26} />}
           </button>
 
         </div>
@@ -91,21 +91,21 @@ const Navbar = () => {
 
       {/* MOBILE MENU */}
       <div
-        className={`md:hidden overflow-hidden transition-all duration-500 ${
+        className={`md:hidden overflow-hidden transition-all duration-300 ${
           isOpen ? "max-h-96" : "max-h-0"
         }`}
       >
-        <ul className="flex flex-col gap-6 px-6 py-8 bg-black/95 backdrop-blur-xl border-t border-white/10 text-white">
+        <ul className="flex flex-col gap-6 px-6 py-7 bg-black border-t border-white/10">
 
           {navLinks.map((link) => (
             <li key={link.name}>
               <a
                 href={`#${link.path}`}
                 onClick={() => setIsOpen(false)}
-                className={`block text-lg transition duration-300 ${
+                className={`block text-base transition duration-300 ${
                   activeSection === link.path
-                    ? "text-blue-400"
-                    : "hover:text-blue-400"
+                    ? "text-white"
+                    : "text-gray-500 hover:text-white"
                 }`}
               >
                 {link.name}

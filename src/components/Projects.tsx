@@ -1,124 +1,190 @@
 import luiseVideo from "../assets/luise.mp4";
 import fonoVideo from "../assets/fono.mp4";
 import translatorImage from "../assets/translator.png";
+import vic3Video from "../assets/vic3.mp4";
 
 const Projects = () => {
   const projects = [
     {
-      title: "Luise-Makeup-Place",
+      number: "01",
+      title: "Luise Makeup Place",
+      type: "Business Website",
       description:
-        "Luise Beauty Makeup Website (Frontend Demo) A responsive React & Tailwind CSS website demo for a makeup artist portfolio.",
+        "A responsive website created for a makeup business to showcase its services, work, and brand online. The project focuses on presenting the business clearly while keeping the experience simple across different screen sizes.",
       video: luiseVideo,
-      tech: ["React", "TypeScript", "Tailwind"],
-      github: "https://github.com/chriswebofficial/Luise-Makeup-Place",
-      live: "https://luise-makeup-place.vercel.app",
+      tech: ["React", "TypeScript", "Tailwind CSS"],
+      github:
+        "https://github.com/chriswebofficial/Luise-Makeup-Place",
+      live:
+        "https://luise-makeup-place.vercel.app",
     },
 
     {
-      title: "Fono",
+      number: "02",
+      title: "FONO",
+      type: "E-Commerce Web App",
       description:
-        "FONO – E-Commerce Web App. FONO is a modern, responsive e-commerce web application built using React, TypeScript, and Vite. It provides users with a smooth shopping experience including product search, filtering, and sorting.",
+        "An e-commerce web application for browsing and exploring phone and accessory products. It includes product search, filtering, sorting, and a responsive shopping interface.",
       video: fonoVideo,
-      tech: ["React", "TypeScript", "Tailwind"],
-      github: "https://github.com/chriswebofficial/FONO",
-      live: "https://fono-two.vercel.app",
+      tech: ["React", "TypeScript", "Vite", "Tailwind CSS"],
+      github:
+        "https://github.com/chriswebofficial/FONO",
+      live:
+        "https://fono-two.vercel.app",
     },
 
     {
-      title: "Text Translator",
+      number: "03",
+      title: "VIC3 Productions Ltd",
+      type: "Company Website",
       description:
-        "This is a simple translator project that helps users translate languages from around the world.",
+        "A professional company website created for VIC3 Productions Ltd to showcase its services, team, work, and brand online. The project was built for real-world use and includes content management features.",
+      video: vic3Video,
+      tech: ["Next.js", "Tailwind CSS", "Firebase", "Cloudinary"],
+      live:
+        "https://vic3-productions-ltd-red.vercel.app/",
+    },
+
+    {
+      number: "04",
+      title: "Text Translator",
+      type: "Web Application",
+      description:
+        "A simple translation application that connects users with language translation services through an API. The project focuses on creating a straightforward interface around an external service.",
       image: translatorImage,
       tech: ["React", "JavaScript", "API"],
-      github: "https://github.com/chriswebofficial/Text-Translator",
-      live: "https://text-translator-ruby.vercel.app",
+      github:
+        "https://github.com/chriswebofficial/Text-Translator",
+      live:
+        "https://text-translator-ruby.vercel.app",
     },
   ];
 
   return (
-    <section id="projects" className="py-32 px-6 bg-black text-white">
+    <section
+      id="projects"
+      className="py-32 px-6 bg-black text-white"
+    >
       <div className="max-w-7xl mx-auto">
 
-        <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-6xl font-bold">
-            Live Projects
+        {/* HEADER */}
+        <div
+          data-aos="fade-up"
+          className="max-w-3xl mb-20"
+        >
+          <p className="text-gray-500 text-sm tracking-[0.25em] uppercase mb-5">
+            Selected Work
+          </p>
+
+          <h2 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
+            Things I've
+            <span className="text-gray-500"> built.</span>
           </h2>
+
+          <p className="text-gray-400 text-lg leading-8">
+            A selection of websites and applications I've worked on,
+            from business websites to web applications and e-commerce
+            projects.
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        {/* PROJECTS */}
+        <div className="space-y-24">
 
           {projects.map((project, index) => (
-            <div
-              key={index}
-              className="bg-zinc-900 rounded-3xl overflow-hidden border border-white/10"
+            <article
+              key={project.title}
+              data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
+              className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center border-t border-white/10 pt-10"
             >
 
-              {/* VIDEO OR IMAGE */}
-              {project.video ? (
-                <video
-                  src={project.video}
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  className="w-full h-56 object-cover"
-                />
-              ) : (
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-56 object-cover"
-                />
-              )}
+              {/* MEDIA */}
+              <div
+                className={`overflow-hidden border border-white/10 ${
+                  index % 2 !== 0 ? "lg:order-2" : ""
+                }`}
+              >
+                {project.video ? (
+                  <video
+                    src={project.video}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="w-full aspect-video object-cover hover:scale-105 transition duration-700"
+                  />
+                ) : (
+                  <img
+                    src={project.image}
+                    alt={`${project.title} project preview`}
+                    className="w-full aspect-video object-cover hover:scale-105 transition duration-700"
+                  />
+                )}
+              </div>
 
-              {/* CONTENT */}
-              <div className="p-6">
+              {/* INFORMATION */}
+              <div
+                className={`${
+                  index % 2 !== 0 ? "lg:order-1" : ""
+                }`}
+              >
+                <div className="flex items-center gap-4 mb-6">
+                  <span className="text-gray-600 text-sm font-mono">
+                    {project.number}
+                  </span>
 
-                <h3 className="text-2xl font-bold mb-3">
+                  <span className="text-gray-500 text-sm uppercase tracking-widest">
+                    {project.type}
+                  </span>
+                </div>
+
+                <h3 className="text-3xl md:text-4xl font-bold mb-6">
                   {project.title}
                 </h3>
 
-                <p className="text-gray-400 mb-5 leading-7">
+                <p className="text-gray-400 text-lg leading-8 mb-8 max-w-xl">
                   {project.description}
                 </p>
 
-                {/* TECH STACK */}
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {project.tech.map((item, i) => (
+                {/* TECH */}
+                <div className="flex flex-wrap gap-x-5 gap-y-3 mb-10">
+                  {project.tech.map((item) => (
                     <span
-                      key={i}
-                      className="bg-black px-3 py-1 rounded-full text-sm border border-white/10"
+                      key={item}
+                      className="text-sm text-gray-500"
                     >
                       {item}
                     </span>
                   ))}
                 </div>
 
-                {/* BUTTONS */}
-                <div className="flex gap-4">
-
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 text-center bg-white text-black py-3 rounded-full font-semibold hover:scale-105 transition"
-                  >
-                    GitHub
-                  </a>
+                {/* LINKS */}
+                <div className="flex items-center gap-8">
 
                   <a
                     href={project.live}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 text-center border border-white py-3 rounded-full font-semibold hover:bg-white hover:text-black transition"
+                    className="text-white font-medium border-b border-white pb-1 hover:text-gray-400 hover:border-gray-400 transition"
                   >
-                    Live
+                    View Live ↗
                   </a>
 
-                </div>
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-500 font-medium border-b border-gray-700 pb-1 hover:text-white hover:border-white transition"
+                    >
+                      GitHub ↗
+                    </a>
+                  )}
 
+                </div>
               </div>
-            </div>
+
+            </article>
           ))}
 
         </div>

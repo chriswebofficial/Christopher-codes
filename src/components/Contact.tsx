@@ -10,79 +10,133 @@ import {
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-32 px-6 bg-zinc-900 text-white">
-      <div className="max-w-3xl mx-auto text-center">
-        <h2 className="text-4xl font-bold mb-6">Contact Me</h2>
+    <section
+      id="contact"
+      className="py-32 px-6 bg-zinc-950 text-white"
+    >
+      <div className="max-w-7xl mx-auto">
 
-        <p className="text-gray-400 mb-10">
-          Let’s work together on your next project.
-        </p>
-
-        {/* Social Links */}
-        <div className="flex flex-wrap justify-center gap-6 text-3xl mb-10">
-          <a
-            href="https://www.instagram.com/official_chris_topher?igsh=OTMyeWJoa3h0cmhs"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-pink-500 transition"
-          >
-            <FaInstagram />
-          </a>
-
-          <a
-            href="https://wa.me/2349039550193?text=Hello%20Christopher,%20I%20visited%20your%20portfolio."
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-green-500 transition"
-          >
-            <FaWhatsapp />
-          </a>
-
-          <a
-            href="https://x.com/ChrisToonz_"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-gray-300 transition"
-          >
-            <FaXTwitter />
-          </a>
-
-          <a
-            href="https://github.com/chriswebofficial"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-gray-300 transition"
-          >
-            <FaGithub />
-          </a>
-
-          <a
-            href="https://www.linkedin.com/in/balogun-christopher-234ab7316/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BBHwrWsynTkSh6USGYUq0HQ%3D%3D"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-blue-500 transition"
-          >
-            <FaLinkedin />
-          </a>
-
-          <a
-            href="tel:+2349039550193"
-            className="hover:text-yellow-400 transition"
-          >
-            <FaPhone />
-          </a>
-
-          <a
-          href="mailto:christoonz221@gmail.com"
-          className="hover:text-red-500 transition"
+        {/* HEADER */}
+        <div
+          data-aos="fade-up"
+          className="max-w-3xl mb-20"
         >
-        <FaEnvelope />
-        </a>
+          <p className="text-gray-500 text-sm tracking-[0.25em] uppercase mb-5">
+            Contact
+          </p>
+
+          <h2 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
+            Have a project
+            <span className="text-gray-500"> in mind?</span>
+          </h2>
+
+          <p className="text-gray-400 text-lg leading-8 max-w-2xl">
+            Whether you need a business website, web application,
+            or help improving an existing project, feel free to
+            reach out. I'm always open to discussing new ideas
+            and opportunities.
+          </p>
         </div>
-{/* 
-        <button className="bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition">
-          Send Message
-        </button> */}
+
+        {/* CONTACT CONTENT */}
+        <div
+          data-aos="fade-up"
+          className="grid grid-cols-1 md:grid-cols-2 gap-12 border-t border-white/10 pt-10"
+        >
+
+          {/* EMAIL / PHONE */}
+          <div>
+            <p className="text-sm text-gray-500 uppercase tracking-widest mb-6">
+              Get in touch
+            </p>
+
+            <div className="space-y-5">
+
+              <a
+                href="mailto:christoonz221@gmail.com"
+                className="flex items-center gap-4 text-gray-300 hover:text-white transition"
+              >
+                <FaEnvelope className="text-xl" />
+                <span>christoonz221@gmail.com</span>
+              </a>
+
+              <a
+                href="tel:+2349039550193"
+                className="flex items-center gap-4 text-gray-300 hover:text-white transition"
+              >
+                <FaPhone className="text-xl" />
+                <span>+234 903 955 0193</span>
+              </a>
+
+              <a
+                href="https://wa.me/2349039550193?text=Hello%20Christopher,%20I%20visited%20your%20portfolio."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 text-gray-300 hover:text-white transition"
+              >
+                <FaWhatsapp className="text-xl" />
+                <span>Chat with me on WhatsApp</span>
+              </a>
+
+            </div>
+          </div>
+
+          {/* SOCIALS */}
+          <div>
+            <p className="text-sm text-gray-500 uppercase tracking-widest mb-6">
+              Find me online
+            </p>
+
+            <div className="flex flex-wrap gap-6">
+
+              <a
+                href="https://www.instagram.com/official_chris_topher?igsh=OTMyeWJoa3h0cmhs"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="text-2xl text-gray-400 hover:text-white transition"
+              >
+                <FaInstagram />
+              </a>
+
+              <a
+                href="https://x.com/ChrisToonz_"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="X"
+                className="text-2xl text-gray-400 hover:text-white transition"
+              >
+                <FaXTwitter />
+              </a>
+
+              <a
+                href="https://github.com/chriswebofficial"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                className="text-2xl text-gray-400 hover:text-white transition"
+              >
+                <FaGithub />
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/balogun-christopher-234ab7316/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="text-2xl text-gray-400 hover:text-white transition"
+              >
+                <FaLinkedin />
+              </a>
+
+            </div>
+
+            <p className="text-gray-600 text-sm mt-8">
+              Based in Nigeria · Open to freelance and web development projects.
+            </p>
+          </div>
+
+        </div>
       </div>
     </section>
   );
